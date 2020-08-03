@@ -24,170 +24,245 @@
     <!-- Timeblocks go here -->
     <div value="9" id="nineBlock" class="time-block row">
       <div class="hour">09am</div><textarea type="text" id="nineText" class="description"></textarea>
-      <button type="submit " id="saveNine" class="fa fa-floppy-o saveBtn" style="font-size:24px"></button>
+      <button type="submit " id="saveNine" class="fa fa-floppy-o saveBtn" style="font-size:24px">
+      </button>
     </div>
-    <div value="10" id="10" class="time-block row">
+    <div value="10" id="tenBlock" class="time-block row">
       <div class="hour">10am</div><textarea type="text" id="tenText" class="description"></textarea>
-      <button type="submit " id="saveTen" class="fa fa-floppy-o saveBtn" style="font-size:24px"></button>
+      <button type="submit " id="saveTen" class="fa fa-floppy-o saveBtn" style="font-size:24px">
+      </button>
     </div>
-    <div value="11" id="11" class="time-block row">
+    <div value="11" id="elevenBlock" class="time-block row">
       <div class="hour">11am</div><textarea type="text" id="elevenText" class="description"></textarea>
-      <button type="submit " id="saveEleven" class="fa fa-floppy-o saveBtn" style="font-size:24px"></button>
+      <button type="submit " id="saveEleven" class="fa fa-floppy-o saveBtn" style="font-size:24px">
+      </button>
     </div>
-    <div value="12" id="12" class="time-block row">
+    <div value="12" id="twelveBlock" class="time-block row">
       <div class="hour">12pm</div><textarea type="text" id="twelveText" class="description"></textarea>
-      <button type="submit " id="saveTweleve" class="fa fa-floppy-o saveBtn" style="font-size:24px"></button>
+      <button type="submit " id="saveTweleve" class="fa fa-floppy-o saveBtn" style="font-size:24px">
+      </button>
     </div>
-    <div value="13" id="13" class="time-block row">
+    <div value="13" id="oneBlock" class="time-block row">
       <div class="hour">01pm</div><textarea type="text" id="thirteenText" class="description"></textarea>
-      <button type="submit " id="saveThirteen" class="fa fa-floppy-o saveBtn" style="font-size:24px"></button>
+      <button type="submit " id="saveThirteen" class="fa fa-floppy-o saveBtn" style="font-size:24px">
+      </button>
     </div>
-    <div value="14" id="14" class="time-block row">
+    <div value="14" id="twoBlock" class="time-block row">
       <div class="hour">02pm</div><textarea type="text" id="fourteenText" class="description"></textarea>
-      <button type="submit" id="saveFourteen" class="fa fa-floppy-o saveBtn" style="font-size:24px"></button>
+      <button type="submit" id="saveFourteen" class="fa fa-floppy-o saveBtn" style="font-size:24px">
+      </button>
     </div>
-    <div value="15" id="15" class="time-block row">
+    <div value="15" id="threeBlock" class="time-block row">
       <div class="hour">03pm</div><textarea type="text" id="fifteenText" class="description"></textarea>
-      <button type="submit" id="saveFifteen" class="fa fa-floppy-o saveBtn" style="font-size:24px"></button>
+      <button type="submit" id="saveFifteen" class="fa fa-floppy-o saveBtn" style="font-size:24px">
+      </button>
     </div>
-    <div value="16" id="16" class="time-block row">
-      <div class="hour">04pm</div><textarea type="text" id="sixteenText" class="description"></textarea><button
-        type="submit" id="saveSixteen" class="fa fa-floppy-o saveBtn" style="font-size:24px"></button>
-
-    </div>
-    <div value="17" id="17" class="time-block row">
-      <div class="hour">05pm</div><textarea type="text" id="seventeenText" class="description"></textarea><button
-        type="submit" class="fa fa-floppy-o saveBtn" id="saveSeventeen" style="font-size:24px"></button>
+    <div value="16" id="fourBlock" class="time-block row">
+      <div class="hour">04pm</div><textarea type="text" id="sixteenText" class="description"></textarea>
+      <button type="submit" id="saveSixteen" class="fa fa-floppy-o saveBtn" style="font-size:24px">
+      </button>
 
     </div>
-  </div>
-  <script src="assets/script.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <script>
-    // ------Variables-----
+    <div value="17" id="fiveBlock" class="time-block row">
+      <div class="hour">05pm</div><textarea type="text" id="seventeenText" class="description"></textarea>
+      <button type="submit" class="fa fa-floppy-o saveBtn" id="saveSeventeen" style="font-size:24px">
+      </button>
+
+    </div>
+     </div>
+      <script src="assets/script.js"></script>
+      <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+      <script>
+        // ------Variables-----
 
 
-    var currentDay = document.getElementById("currentDay");
-    var currentHour = moment().hour();
-    var day = moment().day(0);
+        var currentDay = document.getElementById("currentDay");
+        var currentHour = moment().hour();
+        var day = moment().day(0);
 
-    // ----- show time ----
-    currentDay.textContent = day;
+        // ----- show time ----
+        currentDay.textContent = day;
 
-    // -----Functions-----
+        // -----Functions-----
 
-    function saveNine() {
-      var nineTask = $("#nineText").val();
-      localStorage.setItem("nineAM:", nineTask);
-    };
+        function saveNine() {
+          var nineTask = $("#nineText").val();
+          localStorage.setItem("nineAM:", nineTask);
+        };
 
-    function saveTen() {
-      var tenTask = $("#tenText").val();
-      localStorage.setItem("tenAM:", tenTask);
-    };
+        function saveTen() {
+          var tenTask = $("#tenText").val();
+          localStorage.setItem("tenAM:", tenTask);
+        };
 
-    function saveEleven() {
-      var elevenTask = $("#elevenText").val();
-      localStorage.setItem("elevenAM:", elevenTask);
-    };
+        function saveEleven() {
+          var elevenTask = $("#elevenText").val();
+          localStorage.setItem("elevenAM:", elevenTask);
+        };
 
-    function saveTwelve() {
-      var twelveTask = $("#twelveText").val();
-      localStorage.setItem("twelve:", twelveTask);
-    };
+        function saveTwelve() {
+          var twelveTask = $("#twelveText").val();
+          localStorage.setItem("twelve:", twelveTask);
+        };
 
-    function saveThirteen() {
-      var thirteenTask = $("#thirteenText").val();
-      localStorage.setItem("thirteen:", thirteenTask);
-    };
+        function saveThirteen() {
+          var thirteenTask = $("#thirteenText").val();
+          localStorage.setItem("thirteen:", thirteenTask);
+        };
 
-    function saveFourteen() {
-      var fourteenTask = $("#fourteenText").val();
-      localStorage.setItem("fourteen:", fourteenTask);
-    };
+        function saveFourteen() {
+          var fourteenTask = $("#fourteenText").val();
+          localStorage.setItem("fourteen:", fourteenTask);
+        };
 
-    function saveFifteen() {
-      var fifteenTask = $("#fifteenText").val();
-      localStorage.setItem("fifteen:", fifteenTask);
-    };
+        function saveFifteen() {
+          var fifteenTask = $("#fifteenText").val();
+          localStorage.setItem("fifteen:", fifteenTask);
+        };
 
-    function saveSixteen() {
-      var sixteenTask = $("#sixteenText").val();
-      localStorage.setItem("sixteen:", sixteenTask);
-    };
+        function saveSixteen() {
+          var sixteenTask = $("#sixteenText").val();
+          localStorage.setItem("sixteen:", sixteenTask);
+        };
 
-    function saveSeventeen() {
-      var sixteenTask = $("#seventeenText").val();
-      localStorage.setItem("seventeen:", sixteenTask);
-    };
-
-
-
-
-    $(document).ready(function () {
-      var nineText = localStorage.getItem("nineAM:");
-      var nineBox = $("#nineText");
-      nineBox.val(nineBox.val() + nineText);
-
-      var tenText = localStorage.getItem("tenAM:");
-      var tenBox = $("#tenText");
-      tenBox.val(tenBox.val() + tenText);
-
-      var elevenText = localStorage.getItem("elevenAM:");
-      var elevenBox = $("#elevenText");
-      elevenBox.val(elevenBox.val() + elevenText);
-
-      var twelveText = localStorage.getItem("twelve:");
-      var twelveBox = $("#twelveText");
-      twelveBox.val(twelveBox.val() + twelveText);
-
-      var thirteenText = localStorage.getItem("thirteen:");
-      var thirteenBox = $("#thirteenText");
-      thirteenBox.val(thirteenBox.val() + thirteenText);
-
-      var fourteenText = localStorage.getItem("fourteen:");
-      var fourteenBox = $("#fourteenText");
-      fourteenBox.val(fourteenBox.val() + fourteenText);
-
-      var fifteenText = localStorage.getItem("fifteen:");
-      var fifteenBox = $("#fifteenText");
-      fifteenBox.val(fifteenBox.val() + fifteenText);
-
-      var sixteenText = localStorage.getItem("sixteen:");
-      var sixteenBox = $("#sixteenText");
-      sixteenBox.val(sixteenBox.val() + sixteenText);
-
-
-      var seventeenText = localStorage.getItem("seventeen:");
-      var seventeenBox = $("#seventeenText");
-      seventeenBox.val(seventeenBox.val() + seventeenText);
-      console.log(currentHour);
-
-      if (currentHour === 9){
-        $("#nineBlock").addClass("present");
-      }
-      if (currentHour === 10){
-        $("#tenBlock")
-      }
-
-    });
-    //---------------
+        function saveSeventeen() {
+          var sixteenTask = $("#seventeenText").val();
+          localStorage.setItem("seventeen:", sixteenTask);
+        };
 
 
 
-    $("#saveNine").on("click", saveNine);
-    $("#saveTen").on("click", saveTen);
-    $("#saveEleven").on("click", saveEleven);
-    $("#saveTweleve").on("click", saveTwelve);
-    $("#saveThirteen").on("click", saveThirteen);
-    $("#saveFourteen").on("click", saveFourteen);
-    $("#saveFifteen").on("click", saveFifteen);
-    $("#saveSixteen").on("click", saveSixteen);
-    $("#saveSeventeen").on("click", saveSeventeen);
+
+        $(document).ready(function () {
+          var nineText = localStorage.getItem("nineAM:");
+          var nineBox = $("#nineText");
+          nineBox.val(nineBox.val() + nineText);
+
+          var tenText = localStorage.getItem("tenAM:");
+          var tenBox = $("#tenText");
+          tenBox.val(tenBox.val() + tenText);
+
+          var elevenText = localStorage.getItem("elevenAM:");
+          var elevenBox = $("#elevenText");
+          elevenBox.val(elevenBox.val() + elevenText);
+
+          var twelveText = localStorage.getItem("twelve:");
+          var twelveBox = $("#twelveText");
+          twelveBox.val(twelveBox.val() + twelveText);
+
+          var thirteenText = localStorage.getItem("thirteen:");
+          var thirteenBox = $("#thirteenText");
+          thirteenBox.val(thirteenBox.val() + thirteenText);
+
+          var fourteenText = localStorage.getItem("fourteen:");
+          var fourteenBox = $("#fourteenText");
+          fourteenBox.val(fourteenBox.val() + fourteenText);
+
+          var fifteenText = localStorage.getItem("fifteen:");
+          var fifteenBox = $("#fifteenText");
+          fifteenBox.val(fifteenBox.val() + fifteenText);
+
+          var sixteenText = localStorage.getItem("sixteen:");
+          var sixteenBox = $("#sixteenText");
+          sixteenBox.val(sixteenBox.val() + sixteenText);
 
 
-  </script>
+          var seventeenText = localStorage.getItem("seventeen:");
+          var seventeenBox = $("#seventeenText");
+          seventeenBox.val(seventeenBox.val() + seventeenText);
+          console.log(currentHour);
+          // for hour 9 classes
+          if (currentHour === 9) {
+            $("#nineBlock").addClass("present");
+          } else if (currentHour < 9) {
+            $("#nineBlock").addClass("future")
+          } else {
+            $("#nineBlock").addClass("past")
+          }
+
+          // for hour 10 classses
+          if (currentHour === 10) {
+            $("#tenBlock").addClass("present");
+          } else if (currentHour < 10) {
+            $("#tenBlock").addClass("future");
+          } else {
+            $("#tenBlock").addClass("past");
+          }
+          // for hour 11 classes
+          if (currentHour === 11) {
+            $("#elevenBlock").addClass("present");
+          } else if (currentHour < 11) {
+            $("#elevenBlock").addClass("future");
+          } else {
+            $("#elevenBlock").addClass("past");
+          }
+          // for hour 12 classes
+          if (currentHour === 12) {
+            $("#twelveBlock").addClass("present");
+          } else if (currentHour < 12) {
+            $("#twelveBlock").addClass("future");
+          } else {
+            $("#twelveBlock").addClass("past");
+          }
+          // for hour 13 classes
+          if (currentHour === 13) {
+            $("#oneBlock").addClass("present");
+          } else if (currentHour < 13) {
+            $("#oneBlock").addClass("future");
+          } else {
+            $("#oneBlock").addClass("past");
+          }
+          // for hour 14 classes
+          if (currentHour === 14) {
+            $("#twoBlock").addClass("present");
+          } else if (currentHour < 14) {
+            $("#twoBlock").addClass("future");
+          } else {
+            $("#twoBlock").addClass("past");
+          }
+          // for hour 15 classes
+          if (currentHour === 15) {
+            $("#threeBlock").addClass("present");
+          } else if (currentHour < 15) {
+            $("#threeBlock").addClass("future");
+          } else {
+            $("#threeBlock").addClass("past");
+          }
+          // for hour 16 classes
+          if (currentHour === 16) {
+            $("#fourBlock").addClass("present");
+          } else if (currentHour < 16) {
+            $("#fourBlock").addClass("future");
+          } else {
+            $("#fourBlock").addClass("past");
+          }
+          // for hour 17 classes
+          if (currentHour === 17) {
+            $("#fiveBlock").addClass("present");
+          } else if (currentHour < 17) {
+            $("#fiveBlock").addClass("future");
+          } else {
+            $("#fiveBlock").addClass("past");
+          }
+
+        });
+        //---------------
+
+
+
+        $("#saveNine").on("click", saveNine);
+        $("#saveTen").on("click", saveTen);
+        $("#saveEleven").on("click", saveEleven);
+        $("#saveTweleve").on("click", saveTwelve);
+        $("#saveThirteen").on("click", saveThirteen);
+        $("#saveFourteen").on("click", saveFourteen);
+        $("#saveFifteen").on("click", saveFifteen);
+        $("#saveSixteen").on("click", saveSixteen);
+        $("#saveSeventeen").on("click", saveSeventeen);
+
+
+      </script>
 </body>
 
 </html>
